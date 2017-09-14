@@ -1,0 +1,12 @@
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\GADashboard.DAL.dll.config
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\GADashboard.DAL.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\GADashboard.DAL.pdb
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\EntityFramework.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\GADashboard.Model.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\GADashboard.Model.pdb
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\EntityFramework.xml
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\obj\Debug\GADashboard.DAL.csprojResolveAssemblyReference.cache
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\obj\Debug\GADashboard.DAL.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.DAL\obj\Debug\GADashboard.DAL.pdb

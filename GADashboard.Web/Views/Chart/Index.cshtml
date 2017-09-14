@@ -1,0 +1,331 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 chartHolderLeft">
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="col-md-6 chartHolderRight">
+            <canvas id="polarChart"></canvas>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-md-6 chartHolderLeft">
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div class="col-md-6 chartHolderRight">
+            <canvas id="radarChart"></canvas>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 chartHolderLeft">
+            <canvas id="pieChart"></canvas>
+        </div>
+        <div class="col-md-6 chartHolderRight">
+            <canvas id="doughnutChart"></canvas>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        var ctx = document.getElementById("barChart").getContext('2d');
+
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var ctx = document.getElementById("polarChart").getContext('2d');
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var pieChart = new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+        var ctx = document.getElementById("lineChart").getContext('2d');
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var pieChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+        
+    <script>
+        var ctx = document.getElementById("radarChart").getContext('2d');
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var pieChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+        
+    <script>
+        var ctx = document.getElementById("pieChart").getContext('2d');
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var pieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {                    
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <script>
+        var ctx = document.getElementById("doughnutChart").getContext('2d');
+        ctx.canvas.height = 150;
+        function getData() {
+            var result = "";
+            $.ajax({
+                url: "/api/Report",
+                async: false,
+                success: function (data) {
+                    result = data;
+                }
+            });
+            return result;
+        }
+        var pieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Payment Driver", "Trade Driver", "Finance Driver"],
+                datasets: [{
+                    label: '# of Leads Landed',
+                    data: getData(),
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {                    
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}
+
+

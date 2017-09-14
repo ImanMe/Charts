@@ -1,0 +1,5 @@
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.Model\bin\Debug\GADashboard.Model.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.Model\bin\Debug\GADashboard.Model.pdb
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.Model\obj\Debug\GADashboard.Domain.csprojResolveAssemblyReference.cache
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.Model\obj\Debug\GADashboard.Model.dll
+c:\users\imemarpour\documents\visual studio 2015\Projects\GADashboard\GADashboard.Model\obj\Debug\GADashboard.Model.pdb
